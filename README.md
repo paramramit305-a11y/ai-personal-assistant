@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 AI Personal Assistant
+#  AI Personal Assistant
 
 ### A Flask-powered AI web app for answering questions & summarizing emails — deployed with Groq's lightning-fast LLM API
 
