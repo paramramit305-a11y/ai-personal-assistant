@@ -25,7 +25,7 @@ def ask():
     question = request.form.get("question")
         
     response = client.chat.completions.create(
-        model="meta-llama/llama-4-scout-17b-16e-instruct",
+        model="openai/gpt-oss-20b",
         messages=[
             {"role": "system", "content": "Act like a helpful personal assistant"},
             {"role": "user", "content": question}
@@ -44,7 +44,7 @@ def summarize():
     prompt = f"summarize the following email in 2-3 sentences with useful information: {email_text}"
         
     response = client.chat.completions.create(
-        model="meta-llama/llama-4-scout-17b-16e-instruct",
+        model="openai/gpt-oss-20b",
         messages=[
             {"role": "system", "content": "Act like an expert email assistant"},
             {"role": "user", "content": prompt}
