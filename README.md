@@ -6,7 +6,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.x-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
-[![Groq](https://img.shields.io/badge/Groq-LLaMA_4_Scout-F55036?style=for-the-badge&logoColor=white)](https://groq.com)
+[![Groq](https://img.shields.io/badge/Groq-GPT_OSS_20B-F55036?style=for-the-badge&logoColor=white)](https://groq.com)
 [![Render](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
@@ -18,7 +18,7 @@
 
 ## 📌 Overview
 
-**AI Personal Assistant** is a lightweight web application built with **Flask** and deployed on **Render**, powered by the **Groq API (Llama 4 Scout 17B)**. It delivers fast, intelligent responses through a clean, minimal UI — no heavy frameworks, no unnecessary complexity.
+**AI Personal Assistant** is a lightweight web application built with **Flask** and deployed on **Render**, powered by the **Groq API (GPT-OSS 20B)**. It delivers fast, intelligent responses through a clean, minimal UI — no heavy frameworks, no unnecessary complexity.
 
 The app supports two core use cases:
 
@@ -57,8 +57,8 @@ Most AI tools are either too heavy to deploy or too complex to build from scratc
          ▼
 ┌─────────────────┐
 │   Groq API      │  ← OpenAI-compatible SDK
-│  LLaMA 4 Scout  │    chat.completions.create()
-│    (17B)        │
+│   GPT-OSS       │    chat.completions.create()
+│    (20B)        │
 └────────┬────────┘
          │
          ▼
@@ -74,7 +74,7 @@ Most AI tools are either too heavy to deploy or too complex to build from scratc
 | Component | Technology |
 |:----------|:-----------|
 | 🌐 Backend | Flask (Python) |
-| 🤖 LLM | Groq — `meta-llama/llama-4-scout-17b-16e-instruct` |
+| 🤖 LLM | Groq — `openai/gpt-oss-20b` |
 | 🔗 SDK | OpenAI-compatible Groq SDK |
 | 🎨 Frontend | HTML5, CSS3 (Vanilla) |
 | ⚙️ Config | python-dotenv |
@@ -162,7 +162,7 @@ body: { "email": "Hi, I wanted to share an update about the project..." }
 | Decision | Reason |
 |:---------|:-------|
 | Groq over OpenAI | Free tier, faster inference (600+ tokens/sec) |
-| Llama 4 Scout 17B | Multimodal, 2x faster than Llama 3.3 70B |
+| GPT-OSS 20B | Open-weight model, fast inference on Groq |
 | Vanilla CSS | No framework overhead, full control |
 | Async fetch() | Non-blocking UI — no page reload on submit |
 | Gunicorn on Render | Production-grade WSGI server |
@@ -172,7 +172,6 @@ body: { "email": "Hi, I wanted to share an update about the project..." }
 ## 🔮 Future Improvements
 
 - [ ] Add conversation history (multi-turn chat)
-- [ ] Image understanding feature (Llama 4 Scout is multimodal)
 - [ ] Add more tools — code explainer, tweet generator
 - [ ] Add loading animation / streaming response
 - [ ] User authentication
